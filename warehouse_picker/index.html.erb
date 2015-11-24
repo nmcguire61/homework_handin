@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wooooooooooooo-arehouse Picker!</title>
+
+  <script src="application.js"></script>
+
+</head>
+<body>
+
+  <h1>Woooooooooooo-arehouse Picker!</h1>
+
+  <h2>What would you like to do?</h2>
+  
+  <h3>Search by Items:</h3>
+
+    <div class="field">
+<script type="text/javascript">
+  
+  document.write(items);
+</script>
+
+
+
+      <% @items each do |item| %>
+      <% f.checkbox :item_ids, item.id %> <%= item.name %><br>
+      <% end %>
+    </div>
+
+  <h3>Search by Location:</h3>
+
+</body>
+</html>
+
+
+<% @rooms.each do |room| %>
+        <%= f.radio_button :room_id, room.id %> <%= room.name %><br />
+      <% end %>
+
+<!-- <label><input type="checkbox" id="cbox1" value="_checkbox"> Search by Items:</label><br> -->
