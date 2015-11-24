@@ -1,4 +1,4 @@
-var moves = { 1: "Rock", 2: "Paper", 3 "Sissors", 4: "Spock", 5: "Lizard" };
+var moves = { 1: 'Rock', 2: 'Paper', 3: 'Sissors', 4: 'Spock', 5: 'Lizard' };
 
 
 function getUserMove () {
@@ -12,17 +12,17 @@ submit.addEventListener('click', getUserMove, false);
 // User takes a turn:
 //   Get input from user 
 //   save as userMove
-//   Set/rotate the  userMove id to 3
+//   Set/rotate the  userMove id to 1
 // Computer takes a turn:
 //   Random pick form the list above
 //   save as computerMove
 // Compare moves:
-//   userMove - computerMove
+//   computerMove.id
 //   who_won:
-//     if 2 or -1 computer wins
-//     if 1 or -2 user wins
-//     if 0 draw
+//     if computerMove.id 2 or 4 computer wins
+//     if computerMove.id 3 or 5 user wins
+//     if 1 draw
 // Display userMove, computerMove and result with message
-// Play again message to refresh page
+// Play again message/button to refresh page
 
 // record victories?
