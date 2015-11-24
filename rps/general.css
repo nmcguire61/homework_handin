@@ -1,0 +1,29 @@
+body {
+  background-color: #099;
+
+}
+
+h1 {
+  font-size: 40px;
+  text-align: center;
+  color: #FFF;
+  outline-color: #000;
+}
+
+img {
+  background-color: #DDD;
+  margin-left: 30%;
+  margin-right: 33%;
+}
+
+h2 {
+  color: #FFF;
+}
+
+select {
+  font-size: 40px;
+}
+
+header {
+  
+}
