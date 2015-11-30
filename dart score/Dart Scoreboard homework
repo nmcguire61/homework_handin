@@ -1,0 +1,74 @@
+# Dart Scoreboard in Javascript
+
+  - we've had fun with the Calc-U-L8r in Javascript so now we can create a scoreboard for a game of darts.
+
+# Homework
+
+Build a darts scoreboard for a single game of darts in the browser using Javascript. The rules of the game are described below.
+
+[i]: Show darts scoreboard on the wipeboard, as would be done in the pub. Then show the working version e.g.:
+
+```
+          501
+    Fred    |    Barney
+  ---------------------
+    401    |    416
+    356    |    358
+    271    |    298
+    171    |    118
+    76      |    58
+    36      |    Game Shot!
+```
+
+
+## Rules of the Game (of Darts)
+
+Taken from [http://www.flyordie.com/games/help/darts/en/game_rules_501.html]()
+
+
+### Aim of the game
+
+Each player starts with 501 points. The number of points collected while hitting a board with a dart is subtracted from the given player's points. The winner is the player who scores exactly 0 points that way.
+
+It is a double out game, which means that players must hit a double that makes their score exactly zero to win the game.
+
+
+### Bust
+
+In case of a bust the player's score from the previous turn is restored. There is bust if one of the following events arise:
+
+- The player scores more points in the active turn, than his current score (subtracting would result in a negative score)
+- The player has 1 point after subtracting (you cannot score 1 with double out)
+- The player has 0 point after subtracting but violates the double-out rule
+
+
+### End of the game
+
+Players continue playing until one of them scores 0 points in total. The player who does so, wins the game.
+
+
+## MVP
+
+  - Build the simple version but informing a player if they are 'bust' and score them zero for that turn. A player is bust if
+  - they score more than is required to leave them with a score of 'zero'
+  - subtracting the amount scored from the amount required leaves a score of 1 (you cannot finish on a double from that score).
+  - If a player scores the exact required to leave them with a score of 'zero' then that player is the winner so give an appropriate message.
+  - Make sure no score greater than 180 (the maximum possible score) is entered.
+
+
+## Extra Features (if you have time)
+
+#### Check for invalid input
+
+As well as checking to make sure a number is entered, check to make sure the score is valid in darts. Valid scores are 180, 177, 174, 171, 170, 168, 167, 165, 164 and all numbers from 162 to zero.
+
+
+#### Inform a player if they are on a finish
+
+Before a player enters their score check to see if they are on a finish and inform them what they are required to score to win (BUT not how to go about it) e.g:
+
+```
+  Barney, you require 118
+```
+
+Possible finishes are 170, 167, 164, 161, 160 and all other numbers between (and including) 158 and 2 (a player cannot be left with a score of 1).
